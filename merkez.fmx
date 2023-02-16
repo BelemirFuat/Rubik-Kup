@@ -1,0 +1,290 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'R'#252'bik K'#252'p'
+  ClientHeight = 480
+  ClientWidth = 300
+  FormStyle = StayOnTop
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object ToolBar1: TToolBar
+    Align = Bottom
+    Position.Y = 440.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Button1: TButton
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Reset'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Align = Right
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 215.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = #199#246'z'#252'mle'
+      OnClick = Button2Click
+    end
+    object Label1: TLabel
+      Align = Center
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      TextSettings.HorzAlign = Center
+      Text = 'Label1'
+      OnClick = Label1Click
+    end
+  end
+  object Viewport3D1: TViewport3D
+    Align = Client
+    Camera = Camera1
+    Color = xFF060606
+    Size.Width = 300.000000000000000000
+    Size.Height = 440.000000000000000000
+    Size.PlatformDefault = False
+    UsingDesignCamera = False
+    OnMouseDown = Viewport3D1MouseDown
+    OnMouseMove = Viewport3D1MouseMove
+    OnMouseUp = Viewport3D1MouseUp
+    OnMouseWheel = Viewport3D1MouseWheel
+    object Dummy1: TDummy
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+    end
+    object Dummy2: TDummy
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      object Camera1: TCamera
+        AngleOfView = 45.000000000000000000
+        Position.Z = -11.000000000000000000
+        Width = 1.000000000000000000
+        Height = 1.000000000000000000
+        Depth = 1.000000000000000000
+        object Light1: TLight
+          Color = claWhite
+          LightType = Directional
+          SpotCutOff = 60.000000000000000000
+          SpotExponent = 4.000000000000000000
+          Width = 1.000000000000000000
+          Height = 1.000000000000000000
+          Depth = 1.000000000000000000
+        end
+        object Light2: TLight
+          Color = claWhite
+          LightType = Point
+          SpotCutOff = 180.000000000000000000
+          Position.X = 3.000000000000000000
+          Position.Z = 5.000000000000000000
+          Width = 1.000000000000000000
+          Height = 1.000000000000000000
+          Depth = 1.000000000000000000
+        end
+        object Light3: TLight
+          Color = claWhite
+          LightType = Spot
+          SpotCutOff = 60.000000000000000000
+          SpotExponent = 4.000000000000000000
+          Position.X = -3.000000000000000000
+          Position.Z = 5.000000000000000000
+          Width = 1.000000000000000000
+          Height = 1.000000000000000000
+          Depth = 1.000000000000000000
+        end
+        object FloatAnimation5: TFloatAnimation
+          AutoReverse = True
+          Enabled = True
+          Duration = 2.000000000000000000
+          Inverse = True
+          PropertyName = 'Position.Z'
+          StartValue = 0.000000000000000000
+          StopValue = -11.000000000000000000
+        end
+      end
+      object FloatAnimation1: TFloatAnimation
+        Duration = 1.000000000000000000
+        OnFinish = FloatAnimation1Finish
+        PropertyName = 'RotationAngle.X'
+        StartValue = 0.000000000000000000
+        StartFromCurrent = True
+        StopValue = 41.000000000000000000
+      end
+      object FloatAnimation2: TFloatAnimation
+        Duration = 1.000000000000000000
+        OnFinish = FloatAnimation2Finish
+        PropertyName = 'RotationAngle.Y'
+        StartValue = 0.000000000000000000
+        StartFromCurrent = True
+        StopValue = 328.000000000000000000
+      end
+      object FloatAnimation3: TFloatAnimation
+        Duration = 1.000000000000000000
+        OnFinish = FloatAnimation3Finish
+        PropertyName = 'RotationAngle.Z'
+        StartValue = 0.000000000000000000
+        StartFromCurrent = True
+        StopValue = 328.000000000000000000
+      end
+    end
+    object StrokeCube1: TStrokeCube
+      Color = claWhite
+      Locked = True
+      Width = 3.000000000000000000
+      Height = 3.000000000000000000
+      Depth = 3.000000000000000000
+      Opacity = 0.800000011920929000
+      HitTest = False
+      Visible = False
+      OnRender = StrokeCube1Render
+    end
+    object Text1: TText
+      Align = Bottom
+      Locked = True
+      HitTest = False
+      Position.Y = 315.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 125.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Kontrol'
+      TextSettings.FontColor = claWhite
+      Visible = False
+    end
+    object Sphere1: TSphere
+      Width = 2.799999952316284000
+      Height = 2.799999952316284000
+      Depth = 2.799999952316284000
+      HitTest = False
+      MaterialSource = LightMaterialSource2
+    end
+    object helprotation: TDummy
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+    end
+  end
+  object LightMaterialSource8: TLightMaterialSource
+    Diffuse = claNull
+    Ambient = claNull
+    Emissive = claBlack
+    Specular = claNull
+    Shininess = 30
+    Left = 224
+    Top = 8
+  end
+  object LightMaterialSource2: TLightMaterialSource
+    Diffuse = claNull
+    Ambient = claNull
+    Emissive = xFF302D2D
+    Specular = claNull
+    Shininess = 30
+    Left = 32
+    Top = 8
+  end
+  object LightMaterialSource4: TLightMaterialSource
+    Diffuse = claNull
+    Ambient = claNull
+    Emissive = claBlue
+    Specular = claNull
+    Shininess = 30
+    Left = 96
+    Top = 8
+  end
+  object LightMaterialSource5: TLightMaterialSource
+    Diffuse = claNull
+    Ambient = claNull
+    Emissive = claOrange
+    Specular = claNull
+    Shininess = 30
+    Left = 128
+    Top = 8
+  end
+  object LightMaterialSource6: TLightMaterialSource
+    Diffuse = claNull
+    Ambient = claNull
+    Emissive = claRed
+    Specular = claNull
+    Shininess = 30
+    Left = 160
+    Top = 8
+  end
+  object LightMaterialSource7: TLightMaterialSource
+    Diffuse = claNull
+    Ambient = claNull
+    Emissive = claYellow
+    Specular = claNull
+    Shininess = 30
+    Left = 192
+    Top = 8
+  end
+  object LightMaterialSource1: TLightMaterialSource
+    Diffuse = claNull
+    Ambient = claNull
+    Emissive = claBlueviolet
+    Specular = claNull
+    Shininess = 30
+    Top = 8
+  end
+  object LightMaterialSource3: TLightMaterialSource
+    Diffuse = claNull
+    Ambient = claNull
+    Emissive = claGreen
+    Specular = claNull
+    Shininess = 30
+    Left = 64
+    Top = 8
+  end
+  object Text2: TText
+    Align = Top
+    Position.X = 40.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 233.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.FontColor = claWhite
+    Visible = False
+  end
+  object FloatAnimation4: TFloatAnimation
+    Duration = 0.200000002980232200
+    Interpolation = Back
+    OnFinish = FloatAnimation4Finish
+    PropertyName = 'cubemovelength'
+    StartValue = 0.000000000000000000
+    StopValue = 0.000000000000000000
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = Timer1Timer
+    Left = 232
+    Top = 152
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 136
+    Top = 224
+  end
+end
